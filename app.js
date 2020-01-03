@@ -16,11 +16,17 @@ new Vue({
       let max = 10;
       let damage = Math.max(Math.floor(Math.random() * max) + 1, min);
       this.playerHealth -= damage;
+      if (this.playerHealth <= 0) {
+        alert("You loss");
+      }
 
       min = 3;
       max = 10;
       damage = Math.max(Math.floor(Math.random() * max) + 1, min);
       this.monsterHealth -= damage;
+      if (this.monsterHealth <= 0) {
+        alert("You Win");
+      }
     }
   }
 });
