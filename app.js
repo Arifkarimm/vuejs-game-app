@@ -12,21 +12,20 @@ new Vue({
       this.monsterHealth = 100;
     },
     attack() {
-      let min = 3;
-      let max = 10;
-      let damage = Math.max(Math.floor(Math.random() * max) + 1, min);
+      let damage = this.calculationDamage(3, 10);
       this.playerHealth -= damage;
       if (this.playerHealth <= 0) {
         alert("You loss");
       }
 
-      min = 3;
-      max = 10;
-      damage = Math.max(Math.floor(Math.random() * max) + 1, min);
+      damage = this.calculationDamage(3, 10);
       this.monsterHealth -= damage;
       if (this.monsterHealth <= 0) {
         alert("You Win");
       }
+    },
+    calculationDamage(min, max) {
+      return Math.max(Math.floor(Math.random() * max) + 1, min);
     }
   }
 });
