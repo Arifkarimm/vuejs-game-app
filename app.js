@@ -1,6 +1,8 @@
 new Vue({
   el: "#app",
   data: {
-    title: "hello"
+    isGameLoading: false,
+    playerHealth: 100,
+    monsterHealth: 100
   }
 });
