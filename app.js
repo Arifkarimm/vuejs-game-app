@@ -35,6 +35,9 @@ new Vue({
       }
       this.monsterHealthDamage();
     },
+    giveUp() {
+      this.isGameLoading = false;
+    },
     monsterHealthDamage() {
       let damage = this.calculationDamage(5, 12);
       this.playerHealth -= damage;
